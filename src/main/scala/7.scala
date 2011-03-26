@@ -2,7 +2,7 @@ import javax.imageio.{ImageIO}
 import java.io.{File}
 
 object ChallengeSeven extends Application {
-    val image = ImageIO.read(new File("images/oxygen.png"))
+    val image = ImageIO.read(new File("images/inputs/oxygen.png"))
     val subImage = image.getSubimage(0,43,608,9)
     val colorSamplePoints = scala.List.range(0, subImage.getWidth, 7)
     val result = colorSamplePoints.map { pointX =>

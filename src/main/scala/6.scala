@@ -23,5 +23,5 @@ object ChallengeSix extends Application {
     traverse(startingValue)
     collectedComments.reverse.foreach { x => print(x) } // print out contents of list (collected comments)
   }
-  processZip("90052.txt","files/channel.zip")
+  processZip("90052.txt","files/inputs/channel.zip")
 }

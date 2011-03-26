@@ -44,8 +44,8 @@ object ChallengeNine extends Application {
     113, 129, 118, 117, 128, 114, 137, 115, 146, 114, 155, 115, 158, 121, 157,
     128, 156, 134, 157, 136, 156, 136)
 
-  val input = "images/good.jpg"
-  val output = "images/challenge9-result.jpg"
+  val input = "images/inputs/good.jpg"
+  val output = "images/outputs/challenge9-result.jpg"
 
   val image = ImageIO.read(new File(input))
   val pointSize = 8

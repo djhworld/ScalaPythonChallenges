@@ -65,5 +65,5 @@ object ChallengeEleven extends Application {
     val filteredColours = explodedImage.map { row => getEvenOrOddPixelsBasedOnRow(row, explodedImage.indexOf(row)) }
     writeImage(outputFilename, "jpg", buildImage(filteredColours))
   }
-  solve("images/cave.jpg", "images/challenge11-result.jpg")
+  solve("images/inputs/cave.jpg", "images/outputs/challenge11-result.jpg")
 }

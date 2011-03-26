@@ -29,8 +29,8 @@ object ChallengeTwelve extends Application {
     unshuffled.toArray
   }
 
-  val file = readBytesFromFile("images/evil2.gfx")
-  write(unshuffle(file, 5), "images", "Challenge12-")
+  val file = readBytesFromFile("files/inputs/evil2.gfx")
+  write(unshuffle(file, 5), "images/outputs", "Challenge12-")
   println("Done!")
 
 }
