@@ -1,5 +1,5 @@
 package com.djharper.challenges
-object ChallengeTen extends Application with ScalaPythonChallenge {
+object ChallengeTen extends ScalaPythonChallenge {
   @annotation.tailrec
   private def groupIntoChunks(input: String, result: List[String] = Nil): List[String] = {
     if(input.size == 0) {

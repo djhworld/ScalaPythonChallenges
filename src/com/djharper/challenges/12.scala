@@ -2,7 +2,7 @@ package com.djharper.challenges
 import scala.collection.mutable.ArrayBuffer
 import org.apache.commons.io.{IOUtils,FileUtils}
 
-object ChallengeTwelve extends Application with ScalaPythonChallenge {
+object ChallengeTwelve extends ScalaPythonChallenge {
   /* Take items at every step of a collection
   so for example slicestep([1,2,3,4,5,6],0,2) would
   return [1,3,5] */

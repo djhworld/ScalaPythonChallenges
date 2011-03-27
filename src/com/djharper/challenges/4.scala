@@ -1,6 +1,6 @@
 package com.djharper.challenges
 
-object ChallengeFour extends Application with ScalaPythonChallenge {
+object ChallengeFour extends ScalaPythonChallenge {
   def run() = {
     val text = io.Source.fromURL("http://www.pythonchallenge.com/pc/def/equality.html").getLines.slice(22,1271).mkString
     val reg = "[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]".r

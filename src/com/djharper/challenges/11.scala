@@ -3,7 +3,7 @@ import javax.imageio.ImageIO
 import java.io.File
 import java.awt.image.BufferedImage
 
-object ChallengeEleven extends Application with ScalaPythonChallenge {
+object ChallengeEleven extends ScalaPythonChallenge {
   def even = { x:Int => x % 2 == 0 }
   def odd = { x:Int => x % 2 != 0 }
 

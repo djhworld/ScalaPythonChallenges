@@ -2,7 +2,7 @@ package com.djharper.challenges
 import javax.imageio.{ImageIO}
 import java.io.{File}
 
-object ChallengeSeven extends Application with ScalaPythonChallenge {
+object ChallengeSeven extends ScalaPythonChallenge {
     def isGreyScale(c: java.awt.Color) :Boolean = {
         if(c.getRed == c.getGreen && c.getRed == c.getBlue && c.getGreen == c.getBlue) {
             return true

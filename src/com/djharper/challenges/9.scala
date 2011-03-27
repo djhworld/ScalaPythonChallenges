@@ -2,7 +2,7 @@ package com.djharper.challenges
 import java.io.File
 import javax.imageio.ImageIO
 import java.awt.Color
-object ChallengeNine extends Application with ScalaPythonChallenge {
+object ChallengeNine extends ScalaPythonChallenge {
   def run() = {
     val first :List[Int]= List( 146, 399, 163, 403, 170, 393, 169, 391, 166, 386, 170, 381, 170, 371, 170,
       355, 169, 346, 167, 335, 170, 329, 170, 320, 170, 310, 171, 301, 173, 290,

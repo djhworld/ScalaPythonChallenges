@@ -1,7 +1,7 @@
 package com.djharper.challenges
 import java.util.zip.{ZipFile}
 
-object ChallengeSix extends Application with ScalaPythonChallenge {
+object ChallengeSix extends ScalaPythonChallenge {
   def processZip(startingValue:String, zipFileName:String) {
     val zip = new ZipFile(zipFileName)
     var collectedComments:List[String] = List[String]() //list to collect comments

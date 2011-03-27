@@ -1,6 +1,6 @@
 package com.djharper.challenges
 
-object ChallengeFive extends Application with ScalaPythonChallenge {
+object ChallengeFive extends ScalaPythonChallenge {
 
   def traverse(inputText:String) :String = {
     val regEx = """^[0-9]+$""".r

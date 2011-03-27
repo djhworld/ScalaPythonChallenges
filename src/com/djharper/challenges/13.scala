@@ -2,7 +2,7 @@ package com.djharper.challenges
 import java.net.URL
 import org.apache.xmlrpc.client.{XmlRpcClient, XmlRpcClientConfigImpl}
 
-object ChallengeThirteen extends Application with ScalaPythonChallenge {
+object ChallengeThirteen extends ScalaPythonChallenge {
   def run() = {
     val url = new URL("http://www.pythonchallenge.com/pc/phonebook.php")
     val xmlrpcConfig = new XmlRpcClientConfigImpl

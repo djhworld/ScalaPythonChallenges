@@ -3,7 +3,7 @@ import java.io.{ByteArrayInputStream}
 import org.apache.tools.bzip2.{CBZip2InputStream}
 import org.apache.commons.io.{IOUtils}
 
-object ChallengeEight extends Application with ScalaPythonChallenge {
+object ChallengeEight extends ScalaPythonChallenge {
 
   def bunzip2(inputStr: String) :String = {
     val is = new ByteArrayInputStream( inputStr.getBytes("ISO-8859-1") ) //convert string to inputstream and skip first 2 bytes
