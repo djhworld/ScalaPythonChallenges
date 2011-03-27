@@ -1,7 +1,8 @@
+package com.djharper.challenges
 import scala.collection.mutable.ArrayBuffer
 import org.apache.commons.io.{IOUtils,FileUtils}
 
-object ChallengeTwelve extends Application {
+object ChallengeTwelve extends Application with ScalaPythonChallenge {
   /* Take items at every step of a collection
   so for example slicestep([1,2,3,4,5,6],0,2) would
   return [1,3,5] */
@@ -29,8 +30,9 @@ object ChallengeTwelve extends Application {
     unshuffled.toArray
   }
 
-  val file = readBytesFromFile("files/inputs/evil2.gfx")
-  write(unshuffle(file, 5), "images/outputs", "Challenge12-")
-  println("Done!")
-
+  def run() = {
+    val file = readBytesFromFile("files/inputs/evil2.gfx")
+    write(unshuffle(file, 5), "images/outputs", "Challenge12-")
+    println("Done!")
+  }
 }

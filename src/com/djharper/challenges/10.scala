@@ -1,4 +1,5 @@
-object ChallengeTen extends Application {
+package com.djharper.challenges
+object ChallengeTen extends Application with ScalaPythonChallenge {
   @annotation.tailrec
   private def groupIntoChunks(input: String, result: List[String] = Nil): List[String] = {
     if(input.size == 0) {
@@ -16,14 +17,16 @@ object ChallengeTen extends Application {
 
   @annotation.tailrec
   def execute(input: String, counter: Int) :String = {
-      counter match {
-        case 0 => input
-        case _ => execute(groupIntoChunks(input).map { describe }.mkString, counter - 1)
-      }
+    counter match {
+      case 0 => input
+      case _ => execute(groupIntoChunks(input).map { describe }.mkString, counter - 1)
+    }
   }
 
-  val startingVal = "1"
-  val numberOfTimes = 30
-  val result = execute(startingVal, numberOfTimes)
-  println("a[" + numberOfTimes + "] length = " + result.length)
+  def run() = {
+    val startingVal = "1"
+    val numberOfTimes = 30
+    val result = execute(startingVal, numberOfTimes)
+    println("a[" + numberOfTimes + "] length = " + result.length)
+  }
 }

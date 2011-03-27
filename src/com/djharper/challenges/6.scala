@@ -1,6 +1,7 @@
+package com.djharper.challenges
 import java.util.zip.{ZipFile}
 
-object ChallengeSix extends Application {
+object ChallengeSix extends Application with ScalaPythonChallenge {
   def processZip(startingValue:String, zipFileName:String) {
     val zip = new ZipFile(zipFileName)
     var collectedComments:List[String] = List[String]() //list to collect comments
@@ -10,18 +11,21 @@ object ChallengeSix extends Application {
 
       regEx.findFirstIn(lastItem) match {
         case Some(v) =>
-          println("Nothing = (" + lastItem + ")")
+          print(".")
           val zipFileEntry = zip.getEntry(lastItem + ".txt")
           val fileComment = zipFileEntry.getComment
           val nextNothing = io.Source.fromInputStream(zip.getInputStream(zipFileEntry)).mkString
           collectedComments = fileComment :: collectedComments
           traverse(nextNothing)
         case None =>
-          println("Finished, could not find any more nothings. Response text was:   \"" + inputText + "\"")
+          println("\nFinished, could not find any more nothings. Response text was:   \"" + inputText + "\"")
       }
     }
     traverse(startingValue)
     collectedComments.reverse.foreach { x => print(x) } // print out contents of list (collected comments)
   }
-  processZip("90052.txt","files/inputs/channel.zip")
+
+  def run() = {
+    processZip("90052.txt","files/inputs/channel.zip")
+  }
 }

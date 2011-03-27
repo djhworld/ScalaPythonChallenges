@@ -1,11 +1,11 @@
+package com.djharper.challenges
 import javax.imageio.ImageIO
 import java.io.File
 import java.awt.image.BufferedImage
 
-object ChallengeEleven extends Application {
+object ChallengeEleven extends Application with ScalaPythonChallenge {
   def even = { x:Int => x % 2 == 0 }
   def odd = { x:Int => x % 2 != 0 }
-
 
   /* Take items at every step of a collection
   so for example slicestep([1,2,3,4,5,6],0,2) would
@@ -65,5 +65,8 @@ object ChallengeEleven extends Application {
     val filteredColours = explodedImage.map { row => getEvenOrOddPixelsBasedOnRow(row, explodedImage.indexOf(row)) }
     writeImage(outputFilename, "jpg", buildImage(filteredColours))
   }
-  solve("images/inputs/cave.jpg", "images/outputs/challenge11-result.jpg")
+
+  def run() = {
+    solve("images/inputs/cave.jpg", "images/outputs/challenge11-result.jpg")
+  }
 }
