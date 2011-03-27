@@ -3,6 +3,13 @@ This is a repostiory for the solutions I have written for the excellent [Python 
 
 The solutions are written in [Scala](http://www.scala-lang.org/).
 
+## Running
+To run a particular challenge, type and input the number when prompted
+    sbt run
+
+To run all the challenges
+    sbt test
+
 ## Shameless plug
 You can view my musings about each particular solution on my blog [located here](http://djhworld.posterous.com/)
 
